@@ -10,6 +10,10 @@ class A7_버스 : BaseAnswer(){
 
     }
 
+    override fun cleanCode() {
+
+    }
+
 
     // 1 ≤ seat ≤ 30 : 좌석개수
     // 1 ≤ passengers의 길이 ≤ 10 : 승객이 승하차한 정보

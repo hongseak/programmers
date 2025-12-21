@@ -1,14 +1,18 @@
 package org.example.codingtest.level0.q5.산책
 
 import org.example.codingtest.base.BaseAnswer
+import org.example.codingtest.base.Logger
 
 class A5_산책 : BaseAnswer(){
 
     override fun solution() {
-        solution("NSSNEWWN") // [-1, 1]
-        solution("EESEEWNWSNWWNS") // [0, 0]
+        println(solution("NSSNEWWN").toList())
+        println(solution("EESEEWNWSNWWNS").toList())
     }
 
+    override fun cleanCode() {
+
+    }
 
     fun solution(route: String): IntArray {
         var east = 0
@@ -26,6 +30,15 @@ class A5_산책 : BaseAnswer(){
         answer[1] = north
         return answer
     }
+}
 
+fun main(){
+    val a = A5_산책()
+    Logger.getRunTime {
+        a.solution()
+    }
 
+    Logger.getRunTime {
+        a.cleanCode()
+    }
 }

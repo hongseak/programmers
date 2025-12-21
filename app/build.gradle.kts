@@ -26,6 +26,8 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
+    implementation("org.openjdk.jol:jol-core:0.17")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.

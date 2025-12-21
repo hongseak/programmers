@@ -1,9 +1,11 @@
 package org.example.codingtest.level0.q4.저축
 
+import org.example.codingtest.base.BaseAnswer
+import org.example.codingtest.base.Logger
 import java.util.Scanner
 
-class A4_저축 {
-    fun main() {
+class A4_저축 : BaseAnswer(){
+    override fun solution() {
         val sc = Scanner(System.`in`)
         val start: Int = sc.nextInt()
         val before: Int = sc.nextInt()
@@ -21,5 +23,20 @@ class A4_저축 {
         }
 
         println(month)
+    }
+
+    override fun cleanCode() {
+
+    }
+}
+
+fun main(){
+    val a = A4_저축()
+    Logger.getRunTime {
+        a.solution()
+    }
+
+    Logger.getRunTime {
+        a.cleanCode()
     }
 }

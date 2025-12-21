@@ -1,12 +1,16 @@
 package org.example.codingtest.base
 
+import java.util.Scanner
+
 abstract class BaseAnswer {
 
     abstract fun solution()
+    abstract fun cleanCode()
 
 
 
-    private fun main(){
+    fun main(){
         solution()
+        cleanCode()
     }
 }

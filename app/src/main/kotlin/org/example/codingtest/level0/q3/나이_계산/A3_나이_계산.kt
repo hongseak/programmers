@@ -1,8 +1,8 @@
 package org.example.codingtest.level0.q3.나이_계산
 
 import org.example.codingtest.base.BaseAnswer
+import org.example.codingtest.base.Logger
 import java.util.Scanner
-import kotlin.math.ceil
 
 class A3_나이_계산 : BaseAnswer(){
     override fun solution() {
@@ -16,43 +16,33 @@ class A3_나이_계산 : BaseAnswer(){
         } else if (age_type == "Year") {
             answer = 2030 - year
         }
-
         println(answer)
+    }
 
-        // 테스트용
-        val n = 22
-        val w = 6
-        val maxLevel = ceil(n.toDouble()/w.toDouble()).toInt()
-        val arr = MutableList(maxLevel){ outIt ->
-            IntArray(w){ inIt -> (inIt+1) + (outIt + 1) * w }.let{
+    override fun cleanCode() {
+        clearCode()
+    }
 
-                if(outIt % 2 == 0){
-                    it.sort()
-                }else{
-                    it.sorted()
-                }
-            }
+    fun clearCode(){
+        val sc = Scanner(System.`in`)
+        var year = 2030 - sc.nextInt()
+        val age_type = sc.next().lowercase()
+
+        year = when(age_type){
+            "korea" -> year + 1
+            else -> year
         }
+        println(year)
+    }
+}
 
+fun main(){
+    val a = A3_나이_계산()
+    Logger.getRunTime {
+        a.solution()
+    }
 
-
-
-        val a = sc.nextInt()
-        val b = sc.nextInt()
-        val c = sc.next()
-
-        if(c.length < 10){
-            return
-        }
-
-        if(a !in 0 until 100){
-
-        }
-
-        if(a !in 0..100 || b !in 0..100){
-            return
-        }
-
-        String.format("%d + %d = %d", a, b, a+b)
+    Logger.getRunTime {
+        a.cleanCode()
     }
 }

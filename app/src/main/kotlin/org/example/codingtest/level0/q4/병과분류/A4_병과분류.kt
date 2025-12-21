@@ -1,11 +1,24 @@
 package org.example.codingtest.level0.q4.병과분류
 
 import org.example.codingtest.base.BaseAnswer
+import org.example.codingtest.base.Logger
+
 import java.util.Scanner
 
 class A4_병과분류 : BaseAnswer() {
     override fun solution() {
         val sc = Scanner(System.`in`)
+        solution(sc)
+
+    }
+
+    override fun cleanCode(){
+        val sc = Scanner(System.`in`)
+        cleanCode(sc)
+        cleanCode2(sc)
+    }
+
+    private fun solution(sc : Scanner){
         val code = sc.next()
         val lastFourWords = code.substring(code.length - 4, code.length)
 
@@ -20,11 +33,11 @@ class A4_병과분류 : BaseAnswer() {
         }else {
             println("direct recommendation")
         }
+
+
     }
 
-
-    fun cleanCode(){
-        val sc = Scanner(System.`in`)
+    private fun cleanCode(sc : Scanner){
         val code = sc.next()
         val lastFourWords = code.substring(code.length - 4, code.length)
 
@@ -35,11 +48,10 @@ class A4_병과분류 : BaseAnswer() {
             "skin" -> "Dermatology"
             else -> "direct recommendation"
         }
-        print(department)
+        println(department)
     }
 
-    fun cleanCode2(){
-        val sc = Scanner(System.`in`)
+    private fun cleanCode2(sc : Scanner){
         val code = sc.next()
 
         val lastFourWords = if(code.length >= 4) code.takeLast(4) else code
@@ -51,7 +63,19 @@ class A4_병과분류 : BaseAnswer() {
             "skin" -> "Dermatology"
             else -> "direct recommendation"
         }
-        print(department)
+        println(department)
     }
 
+}
+
+
+fun main(){
+    val a = A4_병과분류()
+    Logger.getRunTime {
+        a.solution()
+    }
+
+    Logger.getRunTime {
+        a.cleanCode()
+    }
 }

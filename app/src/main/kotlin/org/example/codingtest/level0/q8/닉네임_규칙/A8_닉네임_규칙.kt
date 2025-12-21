@@ -1,11 +1,16 @@
 package org.example.codingtest.level0.q8.닉네임_규칙
 
 import org.example.codingtest.base.BaseAnswer
+import org.example.codingtest.base.Logger
 
 class A8_닉네임_규칙 : BaseAnswer(){
 
     override fun solution() {
         solution("asd")
+    }
+
+    override fun cleanCode() {
+
     }
 
     fun solution(nickName : String): String{
@@ -73,4 +78,17 @@ class A8_닉네임_규칙 : BaseAnswer(){
 
 
 
+}
+
+fun main(){
+    val a = A8_닉네임_규칙()
+    Logger.getRunTime {
+        a.solution()
+    }
+    val list = mutableListOf<Int>()
+    list.removeLast()
+
+    Logger.getRunTime {
+        a.cleanCode()
+    }
 }

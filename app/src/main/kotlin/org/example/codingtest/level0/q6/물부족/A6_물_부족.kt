@@ -1,11 +1,16 @@
 package org.example.codingtest.level0.q6.물부족
 
 import org.example.codingtest.base.BaseAnswer
+import org.example.codingtest.base.Logger
 
 class A6_물_부족 : BaseAnswer() {
 
     override fun solution() {
-        solution(5141, 500, intArrayOf(10, -10, 10, -10, 10, -10, 10, -10, 10, -10))
+        println(solution(5141, 500, intArrayOf(10, -10, 10, -10, 10, -10, 10, -10, 10, -10)))
+    }
+
+    override fun cleanCode() {
+
     }
 
     fun solution(storage: Int, usage: Int, change: IntArray): Int {
@@ -20,6 +25,15 @@ class A6_물_부족 : BaseAnswer() {
         }
         return -1 // 가뭄이 끝날때까지 물이 남음
     }
+}
 
+fun main(){
+    val a = A6_물_부족()
+    Logger.getRunTime {
+        a.solution()
+    }
 
+    Logger.getRunTime {
+        a.cleanCode()
+    }
 }

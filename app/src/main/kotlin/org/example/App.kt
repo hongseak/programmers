@@ -5,9 +5,7 @@ package org.example
 
 //class App {
 //    fun main() {
-//        print("asd")
-//         val a = A1()
-//         a.solution()
+//
 //    }
 //}
 

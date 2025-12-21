@@ -1,7 +1,12 @@
 package org.example.codingtest.level0.q2.각도_합치기
 
 import org.example.codingtest.base.BaseAnswer
+import org.example.codingtest.base.Logger
 import java.util.Scanner
+
+/**
+ * 👉 [이 문제 보기](문제설명.md)
+ * */
 
 class A2_각도_합치기 : BaseAnswer(){
     override fun solution() {
@@ -13,9 +18,19 @@ class A2_각도_합치기 : BaseAnswer(){
         println(sumAngle % 360)
     }
 
+    override fun cleanCode() {
+
+    }
+
 }
 
 fun main(){
-    val a2 = A2_각도_합치기()
-    a2.solution()
+    val a = A2_각도_합치기()
+    Logger.getRunTime {
+        a.solution()
+    }
+
+    Logger.getRunTime {
+        a.cleanCode()
+    }
 }

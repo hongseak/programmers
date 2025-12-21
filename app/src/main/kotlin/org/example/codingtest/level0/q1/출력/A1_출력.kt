@@ -1,6 +1,14 @@
+
 package org.example.codingtest.level0.q1.출력
 
 import org.example.codingtest.base.BaseAnswer
+import org.example.codingtest.base.Logger
+
+
+/**
+ * 👉 [이 문제 보기](문제설명.md)
+ * */
+
 
 class A1_출력 : BaseAnswer(){
     override fun solution() {
@@ -13,9 +21,20 @@ class A1_출력 : BaseAnswer(){
         println(val2 + "10")
     }
 
+    override fun cleanCode() {
+
+    }
+
 }
 
 fun main(){
     val a = A1_출력()
-    a.solution()
+    Logger.getRunTime {
+        a.solution()
+    }
+
+    Logger.getRunTime {
+        a.cleanCode()
+    }
 }
+

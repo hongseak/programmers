@@ -1,6 +1,7 @@
 package org.example.codingtest.level0.q3.수나누기
 
 import org.example.codingtest.base.BaseAnswer
+import org.example.codingtest.base.Logger
 import java.util.Scanner
 
 
@@ -20,7 +21,7 @@ class A3_수_나누기  : BaseAnswer(){
     }
 
 
-    fun cleanCode(){
+    override fun cleanCode(){
         val sc = Scanner(System.`in`)
         var number = sc.nextInt()
         var answer = 0
@@ -35,5 +36,11 @@ class A3_수_나누기  : BaseAnswer(){
 
 fun main(){
     val a = A3_수_나누기()
-    a.solution()
+    Logger.getRunTime {
+        a.solution()
+    }
+
+    Logger.getRunTime {
+        a.cleanCode()
+    }
 }
